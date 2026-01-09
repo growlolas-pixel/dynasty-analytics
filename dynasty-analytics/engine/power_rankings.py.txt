@@ -1,0 +1,9 @@
+import streamlit as st
+
+def get_power_rankings():
+    # Placeholder logic for now
+    return [
+        {"team": "Team A", "score": 95},
+        {"team": "Team B", "score": 88},
+        {"team": "Team C", "score": 82},
+    ]
