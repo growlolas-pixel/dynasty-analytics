@@ -1,0 +1,7 @@
+import streamlit as st
+
+st.set_page_config(page_title="Home Dashboard", layout="wide")
+
+st.title("🏈 Home Dashboard")
+
+st.write("This is your main dashboard page. More features will be added here as we build the app.")
