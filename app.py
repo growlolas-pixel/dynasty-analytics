@@ -1,18 +1,28 @@
 import streamlit as st
 from ui.styling import apply_base_styles
+from views import home, power_rankings, season_sim
 
+# Base styles
 apply_base_styles()
 
+# Page config
 st.set_page_config(
     page_title="Dynasty Analytics",
     page_icon="📊",
     layout="wide"
 )
 
-st.title("🏈 Dynasty Analytics")
-st.markdown("Welcome to your Dynasty Analytics platform.")
+# Sidebar navigation
+st.sidebar.title("Dynasty Analytics")
+page = st.sidebar.radio(
+    "Navigate",
+    ["Home", "Power Rankings", "Season Simulation"]
+)
 
-st.markdown("Use the sidebar to navigate to:")
-st.markdown("- Home Dashboard")
-st.markdown("- Power Rankings")
-st.markdown("- Season Simulation")
+# Routing
+if page == "Home":
+    home.render()
+elif page == "Power Rankings":
+    power_rankings.render()
+elif page == "Season Simulation":
+    season_sim.render()
